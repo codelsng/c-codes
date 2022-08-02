@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
-////下列程序输出什么？
+
+
+//第一题：下列程序输出什么？
 //int main(void)
 //{
 //	char arr[] = { 'a', 'b', 'c' };
@@ -11,7 +13,9 @@
 //	return 0;
 //}
 
-////下列程序输出的结果是什么？
+
+
+//第二题：下列程序输出的结果是什么？
 //int main(void)
 //{
 //	printf("%zd\n", strlen("c:\test\121"));
@@ -20,7 +24,9 @@
 //	return 0;
 //}
 
-//写一个函数输出两个整数中的较大值：
+
+
+//第三题：写一个函数输出两个整数中的较大值：
 //void max(int num1, int num2);
 int max(int num1, int num2);
 int main(void)
@@ -43,6 +49,7 @@ int max(int num1, int num2)
 	return num1;
 }
 
+//不足的函数：不够通用，最好只求值，打印可能为多余内容
 //void max(int num1, int num2)
 //{
 //	if (num1 < num2)
