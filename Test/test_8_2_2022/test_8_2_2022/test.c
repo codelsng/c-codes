@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 //第一题：下列代码执行结果是什么？
 //死循环输出5
@@ -124,6 +125,8 @@
 
 
 ////求两个整数的最大公约数：
+// 
+// 方法一：常规方法：
 //int main(void)
 //{
 //	int num1 = 0;
@@ -180,4 +183,110 @@
 //
 //	return 0;
 //}
-//方法2：辗转相除法：
+// 
+// 
+////方法2：辗转相除法：
+//int main(void)
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	scanf("%d%d", &num1, &num2);
+//	int num3 = 0;
+//	while (num3 = num1 % num2)
+//	{
+//		num1 = num2;
+//		num2 = num3;
+//	}
+//	printf("最大公约数是%d", num2);
+//	return 0;
+//}
+
+
+
+////打印1000~2000年之间的闰年：
+//int main(void)
+//{
+//	int count = 0;
+//	for (int years = 1000; years <= 2000; years++)
+//	{
+//		if (years % 4 == 0 && years % 100 != 0 || years % 400 == 0)
+//		{
+//			printf("%d ", years);
+//			count++;
+//		}
+//	}
+//	printf("\n%d个闰年", count);
+//
+//	return 0;
+//}
+
+
+//打印100~200之间的素数：
+//偶数中除了2都不可能是质数，可以直接判断奇数：
+int main(void)
+{
+	for (int i = 101; i <= 200; i += 2)
+	{
+		for (int j = 2; j < sqrt(i); j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+			else
+			{
+				printf("%d ", i);
+				break;
+			}
+		}
+	}
+
+	return 0;
+}
+// 
+// 
+// 
+////两个数相乘至少有一个数小于结果的开平方；
+//int main(void)
+//{
+//	for (int i = 100; i <= 200; i++)
+//	{
+//		for (int j = 2; j < sqrt(i); j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//			else
+//			{
+//				printf("%d ", i);
+//				break;
+//			}
+//		}
+//	}
+//
+//	return 0;
+//}
+
+
+
+//int main(void)
+//{
+//	for (int i = 100; i <= 200; i++)
+//	{
+//		for (int j = 2; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//			else
+//			{
+//				printf("%d ", i);
+//				break;
+//			}
+//		}
+//	}
+//
+//	return 0;
+//}
