@@ -1,2 +1,2 @@
 # c-codes
-C language basic codes
+存放初学C语言的代码
