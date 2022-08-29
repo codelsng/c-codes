@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 
-////½»»»Á½ÊıÖµµÄº¯Êı£º
+////äº¤æ¢ä¸¤æ•°å€¼çš„å‡½æ•°ï¼š
 //void Swap(int* num1, int* num2) {
 //	int temp = *num1;
 //	*num1 = *num2;
@@ -13,21 +13,21 @@
 //	int num1 = 10;
 //	int num2 = 20;
 //
-//	printf("½»»»Ç°µÄnum1 = %d, num2 = %d\n", num1, num2);
+//	printf("äº¤æ¢å‰çš„num1 = %d, num2 = %d\n", num1, num2);
 //	Swap(&num1, &num2);
-//	printf("½»»»ºóµÄnum1 = %d, num2 = %d\n", num1, num2);
+//	printf("äº¤æ¢åçš„num1 = %d, num2 = %d\n", num1, num2);
 //
 //	return 0;
 //}
 
 
 
-//ÅĞ¶Ï100~200Ö®¼äµÄËØÊı£º
+//åˆ¤æ–­100~200ä¹‹é—´çš„ç´ æ•°ï¼š
 
-//ÅĞ¶Ï1000~2000ÄêµÄÈòÄê£º
+//åˆ¤æ–­1000~2000å¹´çš„é—°å¹´ï¼š
 
 
-//¶ş·Ö²éÕÒ·¨£º
+//äºŒåˆ†æŸ¥æ‰¾æ³•ï¼š
 
 int main(void)
 {

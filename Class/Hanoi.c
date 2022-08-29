@@ -6,7 +6,7 @@ void Move(char ch1, char ch2);
 int main(void)
 {
 	int num = 0;
-	printf("请输入汉诺塔上的盘子个数：\n");
+	printf("璇疯緭鍏ユ眽璇哄涓婄殑鐩樺瓙涓暟锛歕n");
 	scanf("%d", &num);
 	Hanoi(num, 'a', 'b', 'c');
 
@@ -14,13 +14,13 @@ int main(void)
 }
 
 
-//移动盘子的函数：
+//绉诲姩鐩樺瓙鐨勫嚱鏁帮細
 void Move(char ch1, char ch2)
 {
 	printf("%c --> %c\n", ch1, ch2);
 }
 
-//汉诺塔函数：
+//姹夎濉斿嚱鏁帮細
 void Hanoi(int num, char a, char b, char c)
 {
 	if (1 == num)
@@ -29,9 +29,9 @@ void Hanoi(int num, char a, char b, char c)
 	}
 	else
 	{
-		//把n - 1个盘子借助c从a移动到b
-		//然后把第n个盘子移动到c
-		//然后借助a把n - 1个盘子从b移动到c
+		//鎶妌 - 1涓洏瀛愬�熷姪c浠巃绉诲姩鍒癰
+		//鐒跺悗鎶婄n涓洏瀛愮Щ鍔ㄥ埌c
+		//鐒跺悗鍊熷姪a鎶妌 - 1涓洏瀛愪粠b绉诲姩鍒癱
 		Hanoi(num - 1, a, c, b);
 		Move(a, c);
 		Hanoi(num - 1, b, a, c);
