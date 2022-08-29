@@ -1,29 +1,29 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+#include <string.h>
 #include <time.h>
 #include <stdlib.h>
 
+//å®šä¹‰ROW å’Œ ROWSå¯ä»¥åªåŠ¨ROWï¼ŒROWSéšç€ROWçš„å˜åŒ–è€Œå˜åŒ–ï¼š
 #define ROW 9
 #define COL 9
-
+//å¤šå‡ºæ¥çš„ä¸¤è¡Œä¸¤åˆ—æ˜¯ä¸ºäº†æ’æŸ¥æ—¶é˜²æ­¢æ•°ç»„æœˆç•Œï¼š
 #define ROWS ROW + 2
-#define COLS COL + 2
-
-//¼òµ¥ÄÑ¶È10¸öÀ×£º
-#define EASY 80
+#define COLS ROW + 2
+#define EASY_COUNT 10
 
 
-//³õÊ¼»¯ÆåÅÌ£º
-void InitBoard(char board[ROWS][COLS], int rows, int cols, char ch);
+//åˆå§‹åŒ–æ£‹ç›˜ï¼š
+void InitBoard(char board[ROWS][COLS], int rows, int cols, char set);
 
-//´òÓ¡ÆåÅÌ£º
-void DisplayBoard(char board[ROWS][COLS], int rows, int cols);
+//æ‰“å°æ£‹ç›˜ï¼š
+void DisplayBoard(char board[ROWS][COLS], int row, int col);
 
-//ÂñÀ×£º
+//åŸ‹é›·ï¼š
 void SetMine(char mine[ROWS][COLS], int row, int col, int a, int b);
 
-//»ñÈ¡ÅÅ²é×ø±êÖÜÎ§À×µÄ¸öÊı£º
-int GetMine(char mine[ROWS][COLS], int row, int col);
+//åˆ¤æ–­æ’æŸ¥çš„ä½ç½®å‘¨å›´æœ‰å‡ ä¸ªé›·ï¼š
+int GetMine(char mine[ROWS][COLS], int x, int y);
 
-//ÅÅÀ×£º
+//æ’é›·ï¼š
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col);

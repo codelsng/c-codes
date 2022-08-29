@@ -1,58 +1,56 @@
 #include "game.h"
-
-//ÓÎÏ·²Ëµ¥ÊµÏÖ£º
+#include "game.c"
+//æ‰“å°æ¸¸æˆèœå•ï¼š
 void menu(void)
 {
-	printf("********************\n");
-	printf("****** 1.Play ******\n");
-	printf("****** 2.Exit ******\n");
-	printf("********************\n");
+    puts("********************");
+    puts("********************");
+    puts("******1. play ******");
+    puts("******0. exit ******");
+    puts("********************");
+    puts("********************");
 }
-
-//ÓÎÏ·¹¦ÄÜÊµÏÖ£º
+//æ¸¸æˆå‡½æ•°å®ç°ï¼›
 void game(void)
 {
-	//¶¨ÒåÁ½¸öÆåÅÌ·Ö±ğ¸ºÔğÇ°ºóÌ¨£º
-	char mine[ROWS][COLS] = { 0 };
-	char show[ROWS][COLS] = { 0 };
-	//³õÊ¼»¯ÆåÅÌ£º
-	InitBoard(mine, ROWS, COLS, '0');
-	InitBoard(show, ROWS, COLS, '*');
-	//´òÓ¡ÆåÅÌ£º
-	//DisplayBoard(mine, ROW, COL);
-	DisplayBoard(show, ROW, COL);
-	////ÂñÀ×²âÊÔ£º
-	//SetMine(mine, ROW, COL);
-	//DisplayBoard(mine, ROW, COL);
-	FindMine(mine, show, ROW, COL);
+    //å®šä¹‰ä¸¤ä¸ªæ£‹ç›˜ï¼š
+    char mine[ROWS][COLS] = { 0 };
+    char show[ROWS][COLS] = { 0 };
+    //åˆå§‹åŒ–æ£‹ç›˜ï¼š
+    InitBoard(mine, ROWS, COLS, '0');
+    InitBoard(show, ROWS, COLS, '*');
+    //æ‰“å°æ£‹ç›˜ï¼š
+    //DisplayBoard(mine, ROW, COL);
+    DisplayBoard(show, ROW, COL);
+    //æ’é›·ï¼š
+    FindMine(mine, show, ROW, COL);
 }
 
 int main(void)
 {
-	//È¡Ëæ»úÖµ£º
-	srand((unsigned int)time(NULL));
-	//½øÈëÓÎÏ·£º
-	int input = 0;
-	do
-	{
-		menu();
-		//ÊäÈë1¿ªÊ¼ÓÎÏ·£¬ÊäÈë0ÍË³öÓÎÏ·£¬³ı´Ë¶şÊıÍâµÄÊäÈëÒ»ÂÉÊÇÎª´íÎó£¬²¢ÖØĞÂÊäÈë£º
-		printf("ÇëÑ¡Ôñ£º\n");
-		scanf("%d", &input);
-		if (1 == input)
-		{
-			game();
-		}
-		else if (0 == input)
-		{
-			printf("ÍË³öÓÎÏ·£º\n");
-			break;
-		}
-		else
-		{
-			printf("Ñ¡Ôñ´íÎó£¬ÇëÖØĞÂÑ¡Ôñ£º\n");
-		}
-	} while (input);
-
-	return 0;
+    //å–éšæœºå€¼ï¼š
+    srand((unsigned int)time(NULL));
+    int input = 0;
+    do
+    {
+        //è°ƒç”¨æ¸¸æˆèœå•å‡½æ•°ï¼š
+        menu();
+        //é€‰æ‹©æ˜¯å¦è¿›å…¥æ¸¸æˆï¼š
+        printf("è¯·é€‰æ‹©ï¼š\n");
+        scanf("%d", &input);
+        //è¾“å…¥éªŒè¯ï¼šè‹¥æ˜¯è¾“å…¥1åˆ™è¿›å…¥æ¸¸æˆï¼Œ0åˆ™é€€å‡ºæ¸¸æˆã€‚éæ­¤äºŒå€¼åˆ™æŠ¥é”™é‡é€‰ï¼š
+        if (1 == input)
+        {
+            game();
+        }
+        else if (0 == input)
+        {
+            break;
+        }
+        else
+        {
+            puts("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
+        }
+    } while (input);
+        return 0;
 }
